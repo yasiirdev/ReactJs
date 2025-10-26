@@ -10,21 +10,26 @@ function App() {
   let [task, settask] = useState("");
   let [taskCount, settaskCount] = useState(0);
 
-  function HeadingHandle(e) {
+  // this function set the first input heading value with synthetic event
+  let HeadingHandle = (e) => {
     e.preventDefault();
     setheading(e.target.value);
-  }
+  };
 
-  function TaskHandle(e) {
+  // this function set the second textarea description value with synthetic event
+  let TaskHandle = (e) => {
     e.preventDefault();
     settask(e.target.value);
-  }
+  };
 
-  function saveHandle() {
+  // save the task when user press the save button on modal box
+  let saveHandle = function () {
+    // if the value is not trim() function return
     if (!heading.trim() || !task.trim()) {
-              return;
+      return;
     }
 
+    // newtask obj set heading , task  and id
     const newTask = {
       heading: heading.trim(),
       task: task.trim(),
@@ -35,15 +40,24 @@ function App() {
     settaskCount(taskCount + 1);
     setheading("");
     settask("");
-  }
+  };
+
+  // all list contain a delete button with a uniqe num called taskCount
+  const deleteHandle = (taskId) => {
+    // Filter out the task with the matching ID
+    const updatedTasks = userTask.filter((task) => task.id !== taskId);
+    setuserTask(updatedTasks);
+    // Update the task count
+    settaskCount(updatedTasks.length);
+  };
 
   return (
     <>
       <Container>
         <Header taskCount={taskCount} />
-        <ShowTask userTask={userTask} />
+        <ShowTask userTask={userTask} onDelete={deleteHandle} />
         <Modal
-           HeadingHandle={HeadingHandle}
+          HeadingHandle={HeadingHandle}
           TaskHandle={TaskHandle}
           saveHandle={saveHandle}
           heading={heading}
