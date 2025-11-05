@@ -1,3 +1,4 @@
+// import { useRef } from "react";
 import { FaSave } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
 export default function Modal({
@@ -6,7 +7,13 @@ export default function Modal({
   saveHandle,
   heading,
   task,
-}) {
+}) 
+
+// let ref = useRef(0);
+// console.log(ref);
+
+
+{
   return (
     <>
       <div
@@ -30,7 +37,7 @@ export default function Modal({
               ></button>
             </div>
             <div className="modal-body">
-              <form onSubmit={(e) => e.preventDefault()}>
+              <form onSubmit={(e) => e.preventDefault()}> /* use a preventDefault for form */
                 <div className="mb-3">
                   <label htmlFor="task-heading" className="form-label">
                     Heading
@@ -40,8 +47,8 @@ export default function Modal({
                     className="form-control"
                     id="task-heading"
                     name="heading"
-                    value={heading}
-                    onChange={HeadingHandle}
+                    value={heading}  //  task heading value that user will enter 
+                    onChange={HeadingHandle} // *Handle function
                     aria-required="true"
                     placeholder="Enter task heading"
                   />
@@ -53,8 +60,8 @@ export default function Modal({
                   <textarea
                     className="form-control"
                     id="task-description"
-                    value={task}
-                    onChange={TaskHandle}
+                    value={task}      // task value that user will enter 
+                    onChange={TaskHandle} // *Handle function
                   ></textarea>
                 </div>
               </form>
@@ -74,7 +81,7 @@ export default function Modal({
                 onClick={saveHandle}
                 aria-label="Save task"
               >
-                <FaSave />
+                <FaSave /> /* react icon with family of (fa) */
               </button>
             </div>
           </div>
