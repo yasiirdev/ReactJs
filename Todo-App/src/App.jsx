@@ -8,23 +8,19 @@ function App() {
   let [userTask, setuserTask] = useState([]);
   let [taskCount, settaskCount] = useState(0);
 
-  
-
   // save the task when user press the save button on modal box
   let saveHandle = function (heading , task) {
     // if the value is not trim() function return
     if (!heading.trim() || !task.trim()) {
-      return;
+               return;
     }
 
-    // newtask obj set heading , task  and id
-    const newTask = {
+    // using functional update 
+    setuserTask((currVal /* currVal refences of original val that is assign to userTask as a state*/)=>[...currVal, {
       heading: heading.trim(),
       task: task.trim(),
       id: taskCount,
-    };
-
-    setuserTask([...userTask, newTask]);
+    }]);
     settaskCount(taskCount + 1);
   };
 
