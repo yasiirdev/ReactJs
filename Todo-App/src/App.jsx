@@ -16,7 +16,7 @@ function App() {
     }
 
     // using functional update 
-    setuserTask((currVal /* currVal refences of original val that is assign to userTask as a state*/)=>[...currVal, {
+    setuserTask((prevVal /* currVal refences of original val that is assign to userTask as a state*/)=>[...prevVal, {
       heading: heading.trim(),
       task: task.trim(),
       id: taskCount,
