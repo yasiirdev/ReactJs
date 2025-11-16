@@ -1,8 +1,14 @@
-export default function CardProduct({ items }) {
+import { useContext } from "react";
+import { UserContext } from "../store/context";
+
+export default function CardProduct() {
+  
+  const {items} = useContext(UserContext);
+
   return (
     <>
       <div
-        classNameName="Card"
+        className="Card"
         style={{
           color: items.color,
         }}
@@ -11,7 +17,7 @@ export default function CardProduct({ items }) {
           return (
             <div
               key={item.id}
-              classNameName="top"
+              className="top"
               style={{
                 color: item.color,
               }}
