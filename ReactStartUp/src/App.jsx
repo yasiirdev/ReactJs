@@ -1,25 +1,22 @@
 import Rendering from "./components/renderingLists";
 import CardProduct from "./components/CardProduct";
 import Sculpture from "./components/sculpture";
+import { UserContext } from "./store/context";
 
-
-const user = [
+const items = [
   { title: "Banana", color: "pink", id: 1 },
   { title: "tomotes", color: "lightblue", id: 2 },
   { title: "watermelon", color: "blue", id: 3 },
 ];
 
-
-
-function App() {
-
+export default function App() {
   return (
     <>
-     <Rendering></Rendering>
-     <CardProduct items={user} ></CardProduct>
-      <Sculpture></Sculpture>
+      <UserContext value={{ items }}>
+        <Rendering></Rendering>
+        <CardProduct></CardProduct>
+      </UserContext>
     </>
   );
 }
 
-export default App;
