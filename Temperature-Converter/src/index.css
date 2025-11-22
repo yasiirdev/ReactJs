@@ -24,46 +24,41 @@ html {
   width: inherit;
   height: inherit;
   font-family: var(--fontMotserrat), sans-serif;
-  background-color: aqua;
+  background-color: skyblue;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.outerdiv {
-  width: 80%;
-  height: 80%;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  overflow: hidden;
-}
+
 
 .innerdiv {
   width: 90%;
   height: 40%;
-  background: #444;
+  background: white;
   display: inline-flex;
   align-items: center;
-  padding-left: 2vw;
+  padding: 2vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
 }
 
 .heading {
   position: absolute;
-  top: 12%;
-  left: 14%;
+  top: 3%;
+  left: 3%;
+  color: #000;
 }
 
 .detail {
   position: absolute;
-  top: 28%;
-  left: 16%;
+  top: 23%;
+  left: 4%;
+  color: #000;
 }
 
-.inputNum {
+.convertNum {
   width: 11%;
   height: 25%;
   border-radius: 8px;
@@ -78,7 +73,8 @@ html {
   height: 25%;
   border-radius: 8px;
   font-family: var(--fontUbuntu);
-   margin: 10px;
+  margin: 10px;
+  font-size: large;
 }
 
 #toUnit {
@@ -86,51 +82,29 @@ html {
   height: 25%;
   border-radius: 8px;
   font-family: var(--fontUbuntu);
-   margin: 10px;
+  margin: 10px;
+  font-size: large;
 }
 
-
-/*manu code */
-
-.menu{
-     width: 10%;
-     height: 6%;
-     border: none;
-     background-color: rgba(153, 0, 255, 0.219);
-     display: inline-flex;
-     align-items: center;
-     justify-content: center;
+.convertBt {
+  width: 11%;
+  height: 25%;
+  border-radius: 8px;
+  margin: 10px;
+  font-family: var(--fontMotserrat);
+  font-size: larger;
 }
 
-.menu:hover{
-     cursor: pointer;
-     color: black;
-     font-weight: bolder;
-     background: rgba(0, 0, 0, 0.137);
+.convertBt:hover{
+  background: #000;
+  color: #fff;
 }
 
-.option{
-     height: 40%;
-     background: black;
-     display: grid;
-     grid-template-rows: repeat(5,1fr);
-     outline: 1px solid  yellow;
-     inline-size: 15%;
-     display: none; 
-     position: absolute;
-     top: 6.5%;
-     left: 45%;
-     z-index: 1;
-   
-     
-}
- a{
-     color: white;
-     font-weight: bolder;
-     padding: 10px;
-     border: .25px solid  transparent;
-}
-
-a:hover{
-     border: 2px solid white;
+.result{
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  font-family: var(--fontMotserrat);
+  font-size: large;
+  color: green;
 }
