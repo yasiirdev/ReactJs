@@ -42,9 +42,11 @@ html {
   overflow: hidden;
   position: relative;
   border-radius: 20px;
+  gap: 25px;
 }
 
 .heading {
+  font-size: 2.5vw;
   position: absolute;
   top: 3%;
   left: 3%;
@@ -53,16 +55,16 @@ html {
 
 .detail {
   position: absolute;
+  font-size: 1.5vw;
   top: 23%;
   left: 4%;
   color: #000;
 }
 
 .convertNum {
-  width: 11%;
+  width: 15%;
   height: 25%;
   border-radius: 8px;
-  margin: 10px;
   text-align: center;
   font-size: larger;
   font-family: var(--fontUbuntu);
@@ -73,8 +75,7 @@ html {
   height: 25%;
   border-radius: 8px;
   font-family: var(--fontUbuntu);
-  margin: 10px;
-  font-size: large;
+  font-size: 1.5rem;
 }
 
 #toUnit {
@@ -82,17 +83,15 @@ html {
   height: 25%;
   border-radius: 8px;
   font-family: var(--fontUbuntu);
-  margin: 10px;
-  font-size: large;
+  font-size: 1.5rem;
 }
 
 .convertBt {
-  width: 11%;
+  width: 15%;
   height: 25%;
   border-radius: 8px;
-  margin: 10px;
   font-family: var(--fontMotserrat);
-  font-size: larger;
+  font-size: 1.5vw;
 }
 
 .convertBt:hover{
@@ -105,6 +104,57 @@ html {
   bottom: 15%;
   left: 5%;
   font-family: var(--fontMotserrat);
-  font-size: large;
+  font-size: 1.5vw;
   color: green;
+}
+
+@media (min-width :300px) and (max-width : 425px){
+  .innerdiv{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .heading {
+  font-size: 1rem;
+  top: 3%;
+  left: 17%;
+}
+
+.detail {
+  font-size: .6rem;
+  top: 7%;
+  left: 13%;
+  color: #000;
+}
+
+.convertNum {
+  width: 70%;
+  height: 9%;
+}
+ 
+#fromUnit {
+  width: 70%;
+  height: 9%;
+  font-size: 1.1rem;
+}
+
+#toUnit {
+  width: 70%;
+  height: 9%;
+  font-size: 1.1rem;
+}
+
+.convertBt {
+  width: 70%;
+  height: 10%;
+  font-size: 1.5rem;
+}
+
+.result{
+  font-size: .9rem;
+}
+
 }
