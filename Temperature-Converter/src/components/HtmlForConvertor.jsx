@@ -13,7 +13,8 @@ export function HtmlForConvertor({ unitsHandle }) {
       fromVal.current.options[fromVal.current.options.selectedIndex];
     let userToSelect =
       toVal.current.options[toVal.current.options.selectedIndex];
-    unitsHandle(currentVal, userFromSelect, userToSelect , pRef);
+    unitsHandle(currentVal, userFromSelect, userToSelect, pRef);
+      inputVal.current.value = "";
   };
 
   return (
