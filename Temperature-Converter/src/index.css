@@ -110,7 +110,7 @@ html {
 
 @media (min-width :300px) and (max-width : 425px){
   .innerdiv{
-    height: 90%;
+    height: 80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -119,13 +119,13 @@ html {
 
   .heading {
   font-size: 1rem;
-  top: 3%;
+  top: 8%;
   left: 17%;
 }
 
 .detail {
   font-size: .6rem;
-  top: 7%;
+  top: 13%;
   left: 13%;
   color: #000;
 }
@@ -154,6 +154,7 @@ html {
 }
 
 .result{
+  position:unset;
   font-size: .9rem;
 }
 
