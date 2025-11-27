@@ -36,7 +36,7 @@ function ShowTask({ userTask, onDelete }) {
           >
             <div className="d-flex justify-content-between p-3">
               <div
-                className="task-content flex-grow-1"
+                className="task-content grow"
                 onClick={() => toggleTask(task.id)}
                 role="button"
                 style={{ cursor: "pointer" }}
