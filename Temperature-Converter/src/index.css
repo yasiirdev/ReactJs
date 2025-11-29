@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --fontUbuntu: Ubuntu;
+  --fontMotserrat: Montserrat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: inherit;
+  height: inherit;
+  font-family: var(--fontMotserrat), sans-serif;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.innerdiv {
+  width: 90%;
+  height: 40%;
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  padding: 2vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  gap: 25px;
+}
+
+.heading {
+  font-size: 2.5vw;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  color: #000;
+}
+
+.detail {
+  position: absolute;
+  font-size: 1.5vw;
+  top: 23%;
+  left: 4%;
+  color: #000;
+}
+
+.convertNum {
+  width: 15%;
+  height: 25%;
+  border-radius: 8px;
+  text-align: center;
+  font-size: larger;
+  font-family: var(--fontUbuntu);
+}
+
+#fromUnit {
+  width: 20%;
+  height: 25%;
+  border-radius: 8px;
+  font-family: var(--fontUbuntu);
+  font-size: 1.5rem;
+}
+
+#toUnit {
+  width: 20%;
+  height: 25%;
+  border-radius: 8px;
+  font-family: var(--fontUbuntu);
+  font-size: 1.5rem;
+}
+
+.convertBt {
+  width: 15%;
+  height: 25%;
+  border-radius: 8px;
+  font-family: var(--fontMotserrat);
+  font-size: 1.5vw;
+}
+
+.convertBt:hover{
+  background: #000;
+  color: #fff;
+}
+
+.result{
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  font-family: var(--fontMotserrat);
+  font-size: 1.5vw;
+  color: green;
+}
+
+@media (min-width :300px) and (max-width : 425px){
+  .innerdiv{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .heading {
+  font-size: 1rem;
+  top: 8%;
+  left: 17%;
+}
+
+.detail {
+  font-size: .6rem;
+  top: 13%;
+  left: 13%;
+  color: #000;
+}
+
+.convertNum {
+  width: 70%;
+  height: 9%;
+}
+ 
+#fromUnit {
+  width: 70%;
+  height: 9%;
+  font-size: 1.1rem;
+}
+
+#toUnit {
+  width: 70%;
+  height: 9%;
+  font-size: 1.1rem;
+}
+
+.convertBt {
+  width: 70%;
+  height: 10%;
+  font-size: 1.5rem;
+}
+
+.result{
+  position:unset;
+  font-size: .9rem;
+}
+
+}

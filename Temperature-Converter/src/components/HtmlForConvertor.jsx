@@ -53,6 +53,7 @@ export function HtmlForConvertor({ unitsHandle, result }) {
           Convert
         </button>
         <p className="result">{result}</p>
+        <p className="result" ref={pRef}></p>
       </form>
     </>
   );

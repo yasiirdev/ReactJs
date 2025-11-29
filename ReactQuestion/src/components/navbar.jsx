@@ -11,7 +11,7 @@ export default function Navbar() {
           type="text"
           name="Search"
           placeholder="Search Here ..."
-          classNameName="bar placeholder: text-black border-1 rounded-2xl w-[30%] h-[30px]  font-mono"
+          className="bar placeholder: text-black rounded-2xl w-[30%] h-[30px]  font-mono"
         />
       </nav>
     </>
