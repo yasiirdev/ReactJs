@@ -1,12 +1,11 @@
-// import { useRef } from "react";
-import { useRef } from "react";
+import { useRef , useContext } from "react";
 import { FaSave } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
-
-export default function Modal({ saveHandle }) {
+import TodoContext from "/home/yasiirdev/Programming/ReactJs/Todo-App/src/store/contextApi";
+export default function Modal() {
   let inputVal = useRef();
   let textVal = useRef();
-
+  let { saveHandle } = useContext(TodoContext);
   const HandleSubmit = () => {
     saveHandle(inputVal.current.value, textVal.current.value);
     inputVal.current.value = "";

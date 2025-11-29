@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState , useContext } from "react";
 import "./ShowTask.css";
-
-function ShowTask({ userTask, onDelete }) {
+import TodoContext from "/home/yasiirdev/Programming/ReactJs/Todo-App/src/store/contextApi";
+function ShowTask() {
   const [expandedTask, setExpandedTask] = useState(null);
   const [taskToDelete, setTaskToDelete] = useState(null);
+
+  let { newTask, deleteHandle } = useContext(TodoContext);
 
   const toggleTask = (taskId) => {
     setExpandedTask(expandedTask === taskId ? null : taskId);
@@ -15,21 +17,21 @@ function ShowTask({ userTask, onDelete }) {
 
   const confirmDelete = () => {
     if (taskToDelete !== null) {
-      onDelete(taskToDelete);
+      deleteHandle(taskToDelete);
       setTaskToDelete(null);
     }
   };
 
   return (
     <div className="task-list w-100 m-0 p-0">
-      {userTask.length === 0 ? (
+      {newTask.length === 0 ? (
         <div className="empty-state text-center p-4">
           <i className="bi bi-clipboard2 fs-1 text-muted mb-3 d-block"></i>
           <h3 className="fs-5">No tasks yet</h3>
           <p className="text-muted">Create your first task by clicking the "New Task" button</p>
         </div>
       ) : (
-        userTask.map((task) => (
+        newTask.map((task) => (
           <div 
             className={`task-item border-bottom ${expandedTask === task.id ? 'expanded' : ''}`} 
             key={task.id}
