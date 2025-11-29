@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { MdAddTask } from "react-icons/md";
 import { GoTasklist } from "react-icons/go";
-export default function Header({ taskCount }) {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+import TodoContext from "/home/yasiirdev/Programming/ReactJs/Todo-App/src/store/contextApi"
 
+export default function Header() {
+
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  let { taskCount } = useContext(TodoContext); 
+  
   return (
     <div className="app-header border-bottom bg-white sticky-top">
       <div className="d-flex align-items-center justify-content-between p-3">
