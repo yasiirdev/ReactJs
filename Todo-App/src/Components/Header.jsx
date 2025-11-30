@@ -1,19 +1,18 @@
 import { useState, useContext } from "react";
 import { MdAddTask } from "react-icons/md";
 import { GoTasklist } from "react-icons/go";
-import TodoContext from "/home/yasiirdev/Programming/ReactJs/Todo-App/src/store/contextApi"
+import TodoContext from "../context/contextApi";
 
 export default function Header() {
-
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  let { taskCount } = useContext(TodoContext); 
-  
+  let { taskCount } = useContext(TodoContext);
+
   return (
     <div className="app-header border-bottom bg-white sticky-top">
       <div className="d-flex align-items-center justify-content-between p-3">
         <div className="d-flex align-items-center gap-3">
           <h1 className="h5 mb-0 text-primary fw-bold d-flex align-items-center gap-2">
-           <GoTasklist />
+            <GoTasklist />
             Tasks
           </h1>
           <span className="badge bg-primary-subtle text-primary rounded-pill px-2">
@@ -51,7 +50,7 @@ export default function Header() {
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
-               <MdAddTask />
+                <MdAddTask />
               </button>
             </>
           )}
