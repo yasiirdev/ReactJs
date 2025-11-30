@@ -1,11 +1,10 @@
 import ShowTask from "./Components/showTask";
 import Modal from "./Components/Modal";
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import Container from "./Components/Container";
 import Header from "./Components/Header";
-import { useReducer } from "react";
 import { newTaskReducer } from "./store/ReducerFun";
-import TodoContext from "./store/contextApi";
+import TodoContext from "./context/contextApi";
 
 
 function App() {
