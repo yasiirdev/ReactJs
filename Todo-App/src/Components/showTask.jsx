@@ -1,6 +1,7 @@
 import { useState , useContext } from "react";
 import "./ShowTask.css";
-import TodoContext from "/home/yasiirdev/Programming/ReactJs/Todo-App/src/store/contextApi";
+import TodoContext from "../context/contextApi";
+
 function ShowTask() {
   const [expandedTask, setExpandedTask] = useState(null);
   const [taskToDelete, setTaskToDelete] = useState(null);
