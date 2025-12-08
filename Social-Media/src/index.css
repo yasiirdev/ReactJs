@@ -1,0 +1,40 @@
+.fulcontainer {
+  min-width: 100%;
+  min-width: 100%;
+}
+
+.signinform {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexForm {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.searchSize {
+  min-width: 20px;
+}
+
+.pswtotext {
+  position: relative;
+  right: 50px;
+}
+
+.content {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;    
+  gap: 10px;   
+}
