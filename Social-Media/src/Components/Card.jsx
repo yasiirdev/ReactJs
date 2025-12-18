@@ -1,16 +1,30 @@
-const Card = () => {
+import { useContext } from "react";
+import PostContext from "../Context/ContextApi";
+import { MdDelete } from "react-icons/md";
+
+const Card = ({ postlist }) => {
+  const { deletepost } = useContext(PostContext);
+
+  const deletefun = () => {
+    deletepost(postlist.id);
+  };
   return (
     <div className="card" style={{ width: "18rem" }}>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p classNmae="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
-        </a>
+        <h5 className="card-title">{postlist.title}</h5>
+        <p className="card-text">{postlist.body}</p>
       </div>
+      <div className="postTags">
+        {postlist.tags.map((tag) => (
+          <span class="badge text-bg-info">{tag}</span>
+        ))}
+      </div>
+      <span
+        class="position-absolute top-0 start-100 translate-middle "
+        onClick={deletefun}
+      >
+        <MdDelete />
+      </span>
     </div>
   );
 };
