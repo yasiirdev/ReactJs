@@ -53,7 +53,7 @@ export default function Header({ isCLicked, NonClicked }) {
                 onClick={openPost}
                 ref={anchorCreatePost}
               >
-                Create Post
+                New
               </a>
             </li>
           </ul>
