@@ -1,10 +1,10 @@
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import SideBar from "./Components/SideBar";
 import Hero from "./Components/Hero";
 import Signin from "./Components/Signin";
-import CreatePost from "./Components/CreatePost";
+import CreatePost from "./Components/New";
 import { useState } from "react";
+import { PostContextProvider } from "./Context/ContextProvider";
 function SocialMedia() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isCLicked, setIsClicked] = useState(false);
@@ -23,14 +23,17 @@ function SocialMedia() {
 
   return (
     <>
-      {!isLoggedIn ? <Signin onSignin={HandleSign} /> :
-      <div className="fulcontainer" >
-          <Header isCLicked={HandleCLick} NonClicked={HandleNonClicked}  /> 
-          {isCLicked ?
-           CreatePost :
-            <Hero />}
-        <Footer/>
-      </div>}
+      <PostContextProvider>
+        {!isLoggedIn ? (
+          <Signin onSignin={HandleSign} />
+        ) : (
+          <div className="fulcontainer">
+            <Header isCLicked={HandleCLick} NonClicked={HandleNonClicked} />
+            {isCLicked ? <CreatePost /> : <Hero />}
+            <Footer />
+          </div>
+        )}
+      </PostContextProvider>
     </>
   );
 }
