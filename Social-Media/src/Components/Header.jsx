@@ -13,7 +13,6 @@ export default function Header({ isCLicked, NonClicked }) {
   function openHome() {
     anchorHome.current.className = "nav-link px-2 text-secondary";
     anchorCreatePost.current.className = "nav-link px-2 text-white";
-    
     NonClicked();
   }
 
@@ -56,6 +55,19 @@ export default function Header({ isCLicked, NonClicked }) {
                 New
               </a>
             </li>
+
+            <li >
+              <a href="/features" className="nav-link px-2 text-white">
+                Features
+              </a>
+            </li>
+
+            <li >
+              <a href="#" className="nav-link px-2 text-white">
+                About
+              </a>
+            </li>
+
           </ul>
           <form
             className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
