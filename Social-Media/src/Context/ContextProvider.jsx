@@ -1,76 +1,18 @@
 import { useReducer } from "react";
 import PostContext from "./ContextApi";
 
-const DEFAULT_POST = [
-  {
-    id: 1,
-    user_id: "user_2_u",
-    title: "going to Murry",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-  {
-    id: 2,
-    user_id: "user_2_u",
-    title: "going to islambad",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-  {
-    id: 3,
-    user_id: "user_2_u",
-    title: "going to islambad",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-
-  {
-    id: 4,
-    user_id: "user_2_u",
-    title: "going to islambad",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-  {
-    id: 5,
-    user_id: "user_2_u",
-    title: "going to islambad",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-  {
-    id: 6,
-    user_id: "user_2_u",
-    title: "going to islambad",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-  {
-    id: 7,
-    user_id: "user_2_u",
-    title: "going to islambad",
-    body: "hi friend whatUp and i'm going to murry",
-    reaction: 123,
-    tags: ["happy", "good", "beauty"],
-  },
-];
-
 const reducerFun = (preValue, action) => {
-  let post = preValue;
-  if (action.id === "DELETE_POST") {
-    post = action.newPost;
+  let new_post = preValue;
+  if (action.type === "USER_POST") {
+    new_post = action.posts;
+  } else if (action.type === "DELETE_POST") {
+    new_post = action.newPost;
   }
-  return post;
+  return new_post;
 };
 
 export const PostContextProvider = ({ children }) => {
-  let [postState, disptachPost] = useReducer(reducerFun, DEFAULT_POST);
+  let [postState, disptachPost] = useReducer(reducerFun, []);
 
   const deletepost = (post_id) => {
     let newPost = postState.filter((post) => {
@@ -78,12 +20,23 @@ export const PostContextProvider = ({ children }) => {
     });
 
     disptachPost({
-      id: "DELETE_POST",
+      type: "DELETE_POST",
+      id: "deletePost",
       newPost: newPost,
     });
   };
 
+  const addPosts = (posts) => {
+    disptachPost({
+      type: "USER_POST",
+      id: "addPost",
+      posts,
+    });
+  };
+
   return (
-    <PostContext value={{ deletepost, postState }}>{children}</PostContext>
+    <PostContext value={{ deletepost, postState, addPosts }}>
+      {children}
+    </PostContext>
   );
 };
