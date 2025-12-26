@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useCallback, useReducer } from "react";
 import PostContext from "./ContextApi";
 
 const reducerFun = (preValue, action) => {
@@ -26,13 +26,13 @@ export const PostContextProvider = ({ children }) => {
     });
   };
 
-  const addPosts = (posts) => {
+  const addPosts = useCallback((posts) => {
     disptachPost({
       type: "USER_POST",
       id: "addPost",
       posts,
     });
-  };
+  },[]);
 
   return (
     <PostContext value={{ deletepost, postState, addPosts }}>
