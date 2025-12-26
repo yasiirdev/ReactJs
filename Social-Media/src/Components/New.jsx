@@ -17,31 +17,17 @@ export default function CreatePost() {
 
     console.log(title, description, reaction, tagsInarr , user_name);
 
-    // let jsonPost = {
-    //   id: Date.now(),
-    //   title,
-    //   body: description,
-    //   user_id: user_name,
-    //   tags: ["history", "american", "crime"],
-    //   reaction,
-    // };
-
-    // fetch("https://dummyjson.com/posts/add", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(jsonPost),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => console.log("success", data));
-
+     
     input_1.current.value = "";
     textarea_1.current.value = "";
     input_2.current.value = "";
+    tags.current.value = "";
+    user_id.current.value = "";
     return 0;
   };
 
   return (
-    <form className="formControler">
+    <form className="formControler" id="newposts" name="createnewpost">
       <div className="mb-3 createPostForm">
         <label
           htmlFor="Input1"
