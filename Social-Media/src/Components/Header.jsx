@@ -72,6 +72,8 @@ export default function Header({ isCLicked, NonClicked }) {
           <form
             className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
             role="search"
+            id="searchBar"
+            name="searchBar"
           >
             <input
               type="search"
