@@ -8,9 +8,9 @@ export default function Hero() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://dummyjson.com/posts", {
-      method: "GET",
-    })
+    const controller = new AbortController();
+    const signal = controller.signal;
+    fetch("https://dummyjson.com/posts", { signal }) 
       .then((res) => res.json())
       .then((obj) => {
         addPosts(obj.posts);
@@ -20,6 +20,9 @@ export default function Hero() {
         console.log(error);
         setLoading(false);
       });
+    return () => {
+      controller.abort(/*reason:?*/ "memory is clear"); // to kill async process in cleanup function
+    }
   }, [addPosts]);
 
   return (
