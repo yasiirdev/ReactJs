@@ -1,4 +1,4 @@
-const Leading = () => {
+const Leader = () => {
     return (
       <button className="btn btn-primary" type="button" disabled>
         <span
@@ -13,4 +13,4 @@ const Leading = () => {
 
 
 
-export default Leading;
+export default Leader;
