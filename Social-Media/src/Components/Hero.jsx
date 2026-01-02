@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import PostContext from "../Context/ContextApi";
 import Post from "./post";
-import Leading from "./Spinner";
+import Leader from "./Spinner";
 
 export default function Hero() {
   const { postState, addPosts } = useContext(PostContext);
@@ -10,29 +10,36 @@ export default function Hero() {
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-    fetch("https://dummyjson.com/posts", { signal }) 
-      .then((res) => res.json())
-      .then((obj) => {
-        addPosts(obj.posts);
+
+    fetch("https://jsonplaceholder.typicode.com/posts", { signal }).then((res) => {
+        if (!res.ok) {
+          throw new Error("error dua to unstable network");
+        } else {
+          return res.json();
+        }
+      }).then((json) => {
+        addPosts(json); // reactive value
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
-        setLoading(false);
+        console.log(error,"fetching error");
+        setLoading(true);
       });
     return () => {
-      controller.abort(/*reason:?*/ "memory is clear"); // to kill async process in cleanup function
-    }
+      controller.abort(/*reason:?*/); // to kill async process in cleanup function
+    };
   }, [addPosts]);
 
   return (
     <>
-      {loading && (
-        <div className="leading">
-          <Leading />
-        </div>
-      )}
       <div className="content">
+        
+        {loading && (
+          <div className="leading">
+            <Leader />
+          </div>
+        )}
+
         {!loading &&
           postState.map((postlist) => (
             <Post key={postlist.id} postlist={postlist} />
