@@ -20,7 +20,6 @@ function SocialMedia() {
     setIsClicked(false);
   }
 
-
   return (
     <>
       <PostContextProvider>
