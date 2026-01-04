@@ -1,73 +1,60 @@
 import { useRef } from "react";
+import {  Link } from "react-router-dom";
 
-export default function Header({ isCLicked, NonClicked }) {
+export default function Header() {
+  
   const anchorHome = useRef(null);
   const anchorCreatePost = useRef(null);
 
-  function openPost() {
+  function openCreatePost() {
     anchorCreatePost.current.className = "nav-link px-2 text-secondary";
     anchorHome.current.className = "nav-link px-2 text-white";
-    isCLicked();
   }
 
   function openHome() {
     anchorHome.current.className = "nav-link px-2 text-secondary";
     anchorCreatePost.current.className = "nav-link px-2 text-white";
-    NonClicked();
   }
 
   return (
     <header className="p-3 text-bg-dark">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a
-            href="/"
-            className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-          >
-            <svg
-              className="bi me-2"
-              width="40"
-              height="32"
-              role="img"
-              aria-label="Bootstrap"
-            >
-              <use xlinkHref="#bootstrap"></use>
-            </svg>
-          </a>
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="nav-link px-2 text-secondary"
                 onClick={openHome}
                 ref={anchorHome}
+                name="home"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="create-post"
                 className="nav-link px-2 text-white"
-                onClick={openPost}
+                onClick={openCreatePost}
                 ref={anchorCreatePost}
+                name="new"
               >
                 New
-              </a>
+              </Link>
             </li>
 
-            <li >
-              <a href="/features" className="nav-link px-2 text-white">
+            <li>
+              <Link to="/features" className="nav-link px-2 text-white">
                 Features
-              </a>
+              </Link>
             </li>
 
-            <li >
-              <a href="#" className="nav-link px-2 text-white">
+            <li>
+              <Link to="/about" className="nav-link px-2 text-white">
                 About
-              </a>
+              </Link>
             </li>
-
           </ul>
           <form
             className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"
@@ -80,16 +67,10 @@ export default function Header({ isCLicked, NonClicked }) {
               className="form-control form-control-dark text-bg-dark searchSize"
               placeholder="Search..."
               aria-label="Search"
+              id="searchhpanel"
+              name="searchpanel"
             />
           </form>
-          {/* <div className="text-end">
-            <button type="button" className="btn btn-outline-light me-2">
-              Login
-            </button>
-            <button type="button" className="btn btn-warning">
-              Sign-up
-            </button>
-          </div> */}
         </div>
       </div>
     </header>
