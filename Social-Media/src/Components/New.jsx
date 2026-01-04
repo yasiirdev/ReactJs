@@ -1,4 +1,4 @@
-import { useContext,  useRef } from "react";
+import { useContext, useRef } from "react";
 import { useOnline } from "../Hooks/networkStatus";
 import PostContext from "../Context/ContextApi";
 export default function CreatePost() {
@@ -9,7 +9,7 @@ export default function CreatePost() {
   // custom hook
   const isonline = useOnline();
   const { pushPost } = useContext(PostContext);
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     let I = userId.current.value;
@@ -27,18 +27,10 @@ export default function CreatePost() {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
-      .then((response) => {
-        if (response.status === 200) {
-          return response.json();
-        } else {
-          throw new Error("Method : POST is fail  due to unstable network");
-        }
-      })
-      .then((json) => {
-        console.log(json);
-        return pushPost(json);
-      }).catch(error => console.log(error));
-
+      .then((response) => response.json())
+      .then((json) => pushPost(json))
+      .catch((error) => console.log(error));
+    54;
     userId.current.value = "";
     body.current.value = "";
     title.current.value = "";
