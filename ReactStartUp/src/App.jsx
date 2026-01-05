@@ -1,7 +1,8 @@
 import Rendering from "./components/renderingLists";
 import CardProduct from "./components/CardProduct";
-import Sculpture from "./components/sculpture";
+import { Time } from "./components/RealTime";
 import { UserContext } from "./store/context";
+import NetworkState from "./components/ChecknetworkState";
 
 const items = [
   { title: "Banana", color: "pink", id: 1 },
@@ -13,8 +14,10 @@ export default function App() {
   return (
     <>
       <UserContext value={{ items }}>
+        <NetworkState></NetworkState>
         <Rendering></Rendering>
         <CardProduct></CardProduct>
+        <Time></Time>
       </UserContext>
     </>
   );
