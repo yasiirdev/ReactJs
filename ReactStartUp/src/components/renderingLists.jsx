@@ -5,14 +5,12 @@ const products = [
   { title: "watermelon", isFruit: true, id: 3 },
 ];
 
-
-
 // List component that is taking porps from its parent
 function List({ Fruit }) {
   Fruit.map((item) => {
     return (
       <li
-        key={item.id}
+        key={item}
         style={{
           color: item.isFruit ? "magenta" : "darkgreen",
         }}
