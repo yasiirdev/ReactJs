@@ -1,18 +1,6 @@
 import { useCallback, useReducer, useEffect, useState } from "react";
 import PostContext from "./ContextApi";
-
-const reducerFun = (preValue, action) => {
-  let new_post = preValue;
-  if (action.type === "ADD_POST") {
-    new_post = action.payload.posts;
-  } else if (action.type === "DELETE_POST") {
-    new_post = action.payload.newPost;
-  } else if (action.type === "USER_POST") {
-    // console.log(action.payload.user_post);
-    new_post = [action.payload.user_post, ...preValue];
-  }
-  return new_post;
-};
+import { reducerFun } from "../Store/reduceFun";
 
 export const PostContextProvider = ({ children }) => {
   let [postState, disptachPost] = useReducer(reducerFun, []);
@@ -20,16 +8,11 @@ export const PostContextProvider = ({ children }) => {
 
   
   const deletepost = (post_id) => {
-    
-    let newPost = postState.filter((post) => {
-      return post.id !== post_id;
-    });
-
     disptachPost({
       type: "DELETE_POST",
       id: "deletePost",
       payload: {
-        newPost,
+        post_id,
       },
     });
   };
