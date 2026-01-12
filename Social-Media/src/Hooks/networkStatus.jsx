@@ -18,6 +18,7 @@ export const  useOnline =() => {
 
     return () => {
       // cleanUp function
+      console.log("clean up");
       window.removeEventListener("online", Handleonline);
       window.removeEventListener("offline", Handleoffline);
     };
