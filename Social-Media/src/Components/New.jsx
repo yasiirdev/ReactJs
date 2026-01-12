@@ -1,15 +1,18 @@
 import { useContext, useRef } from "react";
 import { useOnline } from "../Hooks/networkStatus";
 import PostContext from "../Context/ContextApi";
+import { useNavigate } from "react-router-dom";
 export default function CreatePost() {
   const userId = useRef(null);
   const body = useRef(null);
   const title = useRef(null);
-
+  const navigate = useNavigate();
+  
   // custom hook
   const isonline = useOnline();
   const { pushPost } = useContext(PostContext);
- 
+
+   
   const handleSubmit = (e) => {
     e.preventDefault();
     let I = userId.current.value;
@@ -28,13 +31,17 @@ export default function CreatePost() {
       },
     })
       .then((response) => response.json())
-      .then((json) => pushPost(json))
-      .catch((error) => console.log(error));
+      .then((json) => {
+        navigate("/");
+        return pushPost(json);
+      })
+      .catch((error) => {
+        console.log(error)
+      });
     54;
     userId.current.value = "";
     body.current.value = "";
     title.current.value = "";
-
     return 0;
   };
 
@@ -84,7 +91,7 @@ export default function CreatePost() {
           ref={body}
         ></textarea>
       </div>
-      {isonline ? (
+      {!isonline ? (
         <button type="submit" className="custom-button" onClick={handleSubmit}>
           Post
         </button>
