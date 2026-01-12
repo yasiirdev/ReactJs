@@ -1,59 +1,55 @@
-import { useRef } from "react";
-import {  Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import SearchBtn from "./searchBtn";
 
 export default function Header() {
-  
-  const anchorHome = useRef(null);
-  const anchorCreatePost = useRef(null);
-
-  function openCreatePost() {
-    anchorCreatePost.current.className = "nav-link px-2 text-secondary";
-    anchorHome.current.className = "nav-link px-2 text-white";
-  }
-
-  function openHome() {
-    anchorHome.current.className = "nav-link px-2 text-secondary";
-    anchorCreatePost.current.className = "nav-link px-2 text-white";
-  }
-
   return (
     <header className="p-3 text-bg-dark">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <Link
+              <NavLink
                 to="/"
-                className="nav-link px-2 text-secondary"
-                onClick={openHome}
-                ref={anchorHome}
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link px-2 text-secondary"
+                    : "nav-link px-2 text-white"
+                }
                 name="home"
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="create-post"
-                className="nav-link px-2 text-white"
-                onClick={openCreatePost}
-                ref={anchorCreatePost}
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link px-2 text-secondary"
+                    : "nav-link px-2 text-white"
+                }
                 name="new"
               >
                 New
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/features" className="nav-link px-2 text-white">
+              <NavLink to="feature" className={({ isActive }) =>
+                isActive
+                  ? "nav-link px-2 text-secondary"
+                  : "nav-link px-2 text-white"}>
                 Features
-              </Link>
+              </NavLink>
             </li>
 
             <li>
-              <Link to="/about" className="nav-link px-2 text-white">
+              <NavLink to="about" className={({ isActive }) =>
+                isActive
+                  ? "nav-link px-2 text-secondary"
+                  : "nav-link px-2 text-white"}>
                 About
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <form
@@ -62,14 +58,7 @@ export default function Header() {
             id="searchBar"
             name="searchBar"
           >
-            <input
-              type="search"
-              className="form-control form-control-dark text-bg-dark searchSize"
-              placeholder="Search..."
-              aria-label="Search"
-              id="searchhpanel"
-              name="searchpanel"
-            />
+            <SearchBtn />
           </form>
         </div>
       </div>
