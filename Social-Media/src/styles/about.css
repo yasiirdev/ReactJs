@@ -1,0 +1,95 @@
+
+@font-face {
+     font-family:signatie;
+     src: url(../assets/signatie/Signatie.otf);
+}
+
+@font-face {
+     font-family: open-sans;
+     src: url("../assets/open-sans/OpenSans-ExtraBold.ttf");
+}
+
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.main{
+     width : 100%;
+     min-height: 100vh;
+     background-image: url("../assets/backiee-228917-landscape.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+
+.ball{
+     background-color: white;
+     border-radius: 50%;
+     width: 8px;
+     height: 8px;
+     position: absolute;
+     transition: all ease-in-out 10ms;
+     z-index: 9999;
+}
+
+.main .nav{
+     width: 100%;
+     display: inline-flex;
+     padding: 10px 10px;
+}
+.nav #left{
+     font-family:signatie;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     text-transform: uppercase;
+    width: 70%;
+    padding-left:7px ;
+}
+
+.hore{
+     display: flex;
+     flex-direction:column;
+     width: 60%;
+     font-family:open-sans;
+     font-size: 3vw;
+     line-height:10%;
+     padding-left: 2vw;
+     min-height: fit-content;
+     transform: translatey(25%);      
+}
+
+.footer{  
+     display: inline-flex;
+      align-items: center;
+      padding:10px 0px 10px 10px ;
+      width: 100%;   
+     font-family:open-sans;
+     font-size: 1rem;
+     text-transform: capitalize;
+     transform: translateY(60px);
+}
+
+.nav a:hover{
+     text-decoration:underline;
+     color: #fff;;
+}
+
+
+h5 {
+    display: block;
+    font-size: 0.80rem;
+    font-weight:bolder;
+    unicode-bidi: isolate;
+}
+
+.h1-yasiir{
+     font-size: 8vw;
+}
+
+.h1-hello{
+     color: #fff;
+     font-size: 8vw;
+}
