@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { MdAddTask } from "react-icons/md";
 import { GoTasklist } from "react-icons/go";
-import TodoContext from "../context/contextApi";
+import TodoContext from "../store/contextApi";
 
 export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

@@ -1,7 +1,7 @@
 import { useRef, useContext } from "react";
 import { FaSave } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
-import TodoContext from "../context/contextApi";
+import TodoContext from "../store/contextApi";
 
 export default function Modal() {
   let inputVal = useRef();

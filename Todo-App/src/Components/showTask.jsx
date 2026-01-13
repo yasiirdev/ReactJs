@@ -1,6 +1,6 @@
-import { useState , useContext } from "react";
+import { useState, useContext } from "react";
 import "./ShowTask.css";
-import TodoContext from "../context/contextApi";
+import TodoContext from "../store/contextApi";
 
 function ShowTask() {
   const [expandedTask, setExpandedTask] = useState(null);
@@ -29,12 +29,16 @@ function ShowTask() {
         <div className="empty-state text-center p-4">
           <i className="bi bi-clipboard2 fs-1 text-muted mb-3 d-block"></i>
           <h3 className="fs-5">No tasks yet</h3>
-          <p className="text-muted">Create your first task by clicking the "New Task" button</p>
+          <p className="text-muted">
+            Create your first task by clicking the "New Task" button
+          </p>
         </div>
       ) : (
         newTask.map((task) => (
-          <div 
-            className={`task-item border-bottom ${expandedTask === task.id ? 'expanded' : ''}`} 
+          <div
+            className={`task-item border-bottom ${
+              expandedTask === task.id ? "expanded" : ""
+            }`}
             key={task.id}
           >
             <div className="d-flex justify-content-between p-3">
@@ -84,11 +88,11 @@ function ShowTask() {
 
       {/* Delete Confirmation Modal */}
       <div
-        className={`modal fade ${taskToDelete !== null ? 'show' : ''}`}
+        className={`modal fade ${taskToDelete !== null ? "show" : ""}`}
         id="deleteConfirmModal"
         tabIndex="-1"
         role="dialog"
-        style={{ display: taskToDelete !== null ? 'block' : 'none' }}
+        style={{ display: taskToDelete !== null ? "block" : "none" }}
       >
         <div className="modal-dialog" role="document">
           <div className="modal-content">
@@ -126,8 +130,8 @@ function ShowTask() {
 
       {/* Modal Backdrop */}
       {taskToDelete !== null && (
-        <div 
-          className="modal-backdrop fade show" 
+        <div
+          className="modal-backdrop fade show"
           onClick={() => setTaskToDelete(null)}
         ></div>
       )}

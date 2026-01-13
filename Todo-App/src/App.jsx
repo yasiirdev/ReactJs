@@ -4,11 +4,9 @@ import { useState, useReducer } from "react";
 import Container from "./Components/Container";
 import Header from "./Components/Header";
 import { newTaskReducer } from "./store/ReducerFun";
-import TodoContext from "./context/contextApi";
-
+import TodoContext from "./store/contextApi";
 
 function App() {
-
   let [taskCount, settaskCount] = useState(0);
   const [newTask, dispatchNewTask] = useReducer(newTaskReducer, []);
 
@@ -16,7 +14,7 @@ function App() {
   const saveHandle = function (heading, task) {
     // if the value is not trim() function return
     if (!heading.trim() || !task.trim()) {
-             return;
+      return;
     }
 
     dispatchNewTask({
@@ -49,7 +47,7 @@ function App() {
       <TodoContext value={{ taskCount, deleteHandle, saveHandle, newTask }}>
         <Container>
           <Header />
-          <ShowTask  />
+          <ShowTask />
           <Modal saveHandle={saveHandle} />
         </Container>
       </TodoContext>
