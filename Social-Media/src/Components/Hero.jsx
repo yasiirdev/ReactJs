@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext } from "react"
 import PostContext from "../Context/ContextApi";
 import Post from "./post";
 import Loader from "./Spinner";

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "../styles/about.css";
+import "../styles/about.css"
 
 export default function About() {
   let ball = useRef(null);

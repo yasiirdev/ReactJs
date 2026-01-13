@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import PostContext from "../Context/ContextApi";
-import { MdDelete } from "react-icons/md";
+import { MdDelete } from "react-icons/md"
 
 const Post = ({ postlist }) => {
   

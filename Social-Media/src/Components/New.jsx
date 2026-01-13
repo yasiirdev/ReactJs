@@ -1,7 +1,7 @@
 import { useContext, useRef } from "react";
 import { useOnline } from "../Hooks/networkStatus";
 import PostContext from "../Context/ContextApi";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 export default function CreatePost() {
   const userId = useRef(null);
   const body = useRef(null);

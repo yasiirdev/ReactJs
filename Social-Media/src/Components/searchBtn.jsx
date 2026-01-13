@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function SearchBtn() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   return (
     <div className="d-flex align-items-center gap-2 searchBtn">

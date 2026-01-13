@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import SearchBtn from "./searchBtn";
-
 export default function Header() {
   return (
     <header className="p-3 text-bg-dark">
