@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function SearchBtn() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <div className="d-flex align-items-center gap-2 searchBtn">
@@ -16,7 +16,7 @@ export default function SearchBtn() {
             className="btn btn-link btn-sm  p-0 bg-danger text-white pointer-event text-decoration-none"
             onClick={() => setIsSearchOpen(false)}
           >
-            Close 
+            Close
             {/* <i className="bi bi-x-lg "></i> */}
           </button>
         </div>
@@ -26,7 +26,7 @@ export default function SearchBtn() {
             className="btn btn-link btn-sm bg-primary text-white pointer-event text-decoration-none"
             onClick={() => setIsSearchOpen(true)}
           >
-           search 
+            search
             {/* <i className="bi bi-search"></i> */}
           </button>
         </>

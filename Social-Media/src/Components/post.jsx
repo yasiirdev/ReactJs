@@ -1,14 +1,13 @@
 import { useContext } from "react";
 import PostContext from "../Context/ContextApi";
-import { MdDelete } from "react-icons/md"
+import { MdDelete } from "react-icons/md";
 
 const Post = ({ postlist }) => {
-  
   const { deletepost } = useContext(PostContext);
   const deletefun = () => {
     deletepost(postlist.id);
   };
-  
+
   return (
     <div className="card" id="design_card" style={{ width: "18rem" }}>
       <div className="card-body">

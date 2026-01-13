@@ -34,19 +34,27 @@ export default function Header() {
             </li>
 
             <li>
-              <NavLink to="feature" className={({ isActive }) =>
-                isActive
-                  ? "nav-link px-2 text-secondary"
-                  : "nav-link px-2 text-white"}>
+              <NavLink
+                to="feature"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link px-2 text-secondary"
+                    : "nav-link px-2 text-white"
+                }
+              >
                 Features
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="about" className={({ isActive }) =>
-                isActive
-                  ? "nav-link px-2 text-secondary"
-                  : "nav-link px-2 text-white"}>
+              <NavLink
+                to="about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "nav-link px-2 text-secondary"
+                    : "nav-link px-2 text-white"
+                }
+              >
                 About
               </NavLink>
             </li>

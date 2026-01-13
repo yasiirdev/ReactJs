@@ -3,15 +3,15 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Loader from "./Components/Spinner.jsx";
 
+const Loader = lazy(() => import("./Components/spinner.jsx"));
 const App = lazy(() => import("./App.jsx"));
-const Hero = lazy(() => import("./Components/Hero.jsx"));
-const CreatePost = lazy(() => import("./Components/New.jsx"));
+const Hero = lazy(() => import("./Components/hero.jsx"));
+const CreatePost = lazy(() => import("./Components/new.jsx"));
 const About = lazy(() => import("./Components/about.jsx"));
 const Feature = lazy(() => import("./Components/feature.jsx"));
 
-const root = window.document.getElementById("root");
+const root = globalThis.document.getElementById("root");
 
 createRoot(root).render(
   <BrowserRouter>

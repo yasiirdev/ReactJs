@@ -1,11 +1,11 @@
-import { useContext } from "react"
+import { useContext } from "react";
 import PostContext from "../Context/ContextApi";
 import Post from "./post";
-import Loader from "./Spinner";
+import Loader from "./spinner";
 
 export default function Hero() {
-  const { postState , loading } = useContext(PostContext);
- 
+  const { postState, loading } = useContext(PostContext);
+
   return (
     <>
       <div className="content">

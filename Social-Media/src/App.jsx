@@ -1,7 +1,6 @@
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Header from "./Components/header";
 import { PostContextProvider } from "./Context/ContextProvider";
-import Container from "./Components/Container";
+import Container from "./Components/container";
 import { Outlet } from "react-router-dom";
 function SocialMedia() {
  
@@ -12,7 +11,6 @@ function SocialMedia() {
         <Container>
           <Header />
           <Outlet />
-          {/* <Footer /> */}
         </Container>
       </PostContextProvider>
     </>
