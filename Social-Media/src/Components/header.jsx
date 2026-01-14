@@ -5,14 +5,14 @@ export default function Header() {
     <header className="p-3 text-bg-dark">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 text-decoration-none">
             <li>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link px-2 text-secondary"
-                    : "nav-link px-2 text-white"
+                    ? "nav-link px-2 text-secondary text-decoration-none"
+                    : "nav-link px-2 text-white text-decoration-none"
                 }
                 name="home"
               >
@@ -24,8 +24,8 @@ export default function Header() {
                 to="create-post"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link px-2 text-secondary"
-                    : "nav-link px-2 text-white"
+                    ? "nav-link px-2 text-secondary text-decoration-none"
+                    : "nav-link px-2 text-white text-decoration-none"
                 }
                 name="new"
               >
@@ -33,26 +33,26 @@ export default function Header() {
               </NavLink>
             </li>
 
-            <li>
+            <li >
               <NavLink
                 to="feature"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link px-2 text-secondary"
-                    : "nav-link px-2 text-white"
+                    ? "nav-link px-2 text-secondary text-decoration-none"
+                    : "nav-link px-2 text-white text-decoration-none"
                 }
               >
                 Features
               </NavLink>
             </li>
 
-            <li>
+            <li >
               <NavLink
                 to="about"
                 className={({ isActive }) =>
                   isActive
-                    ? "nav-link px-2 text-secondary"
-                    : "nav-link px-2 text-white"
+                    ? "nav-link px-2 text-secondary text-decoration-none"
+                    : "nav-link px-2 text-white text-decoration-none"
                 }
               >
                 About

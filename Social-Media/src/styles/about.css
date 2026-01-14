@@ -1,4 +1,6 @@
-
+*{
+     text-decoration: none;
+}
 @font-face {
      font-family:signatie;
      src: url(../assets/signatie/Signatie.otf);
