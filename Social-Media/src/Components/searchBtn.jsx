@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+
 export default function SearchBtn() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -16,8 +19,7 @@ export default function SearchBtn() {
             className="btn btn-link btn-sm  p-0 bg-danger text-white pointer-event text-decoration-none"
             onClick={() => setIsSearchOpen(false)}
           >
-            Close
-            {/* <i className="bi bi-x-lg "></i> */}
+            <IoMdClose />
           </button>
         </div>
       ) : (
@@ -26,8 +28,7 @@ export default function SearchBtn() {
             className="btn btn-link btn-sm bg-primary text-white pointer-event text-decoration-none"
             onClick={() => setIsSearchOpen(true)}
           >
-            search
-            {/* <i className="bi bi-search"></i> */}
+            <FaSearch />
           </button>
         </>
       )}
