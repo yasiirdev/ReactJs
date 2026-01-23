@@ -2,10 +2,20 @@ import { MdOutlineContacts, MdOutlineMail } from "react-icons/md";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { useContext, useState } from "react";
 import AppContext from "../store/ContextApi";
-
+import Cv from "../assets/Cv.pdf";
+import bluebackground from "../assets/bluebackground.jpeg";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { Navigation } = useContext(AppContext);
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = Cv;
+    link.download = Cv;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -16,8 +26,8 @@ export default function Header() {
               <div className="flex items-center gap-3 sm:gap-6 md:gap-8 lg:gap-x-10">
                 <a href="/" title="Home" className="shrink-0">
                   <img
-                    className="h-6 sm:h-7 md:h-8 lg:h-8"
-                    src="https://tailkits.com/ui/iframe/assets/img/logo.svg"
+                    className="h-6 sm:h-7 md:h-8 lg:h-8 rounded-md"
+                    src={bluebackground}
                     alt="Logo"
                   />
                 </a>
@@ -123,25 +133,25 @@ export default function Header() {
 
             {/* Hero Titles */}
             <div className="flex flex-col  lg:items-center gap-1 sm:gap-2 md:gap-2 lg:gap-3 ">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-semibold tracking-tight text-black ">
-                Sir Wakar
+              <h1 className="text-2xl  capitalize sm:text-3xl md:text-4xl lg:text-7xl font-semibold tracking-tight text-black ">
+                Muhammad Waqar ul haq
               </h1>
-              <p className="text-sm sm:text-base md:text-lg  lg:text-3xl font-medium text-black/80">
-                Senior Data Scientist & Business Consultant
+              <p className="text-sm sm:text-base md:text-lg  lg:text-3xl capitalize font-medium text-black/80">
+                A data entry operator
               </p>
             </div>
 
             {/* Hero CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-x-6 w-full sm:w-auto ">
               <button
-                href="#"
+                onClick={() => (window.location = "mailto:waqarulhaq617@gmail.com")}
                 className="flex items-center justify-center gap-2 rounded-xl bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 w-full sm:w-auto"
               >
                 <MdOutlineMail className="text-base" /> Send Email
               </button>
 
               <button
-                href="#"
+                onClick={handleDownloadCV}
                 className="flex items-center justify-center gap-2 rounded-xl bg-[#edede9] px-3.5 py-2.5 text-sm font-semibold text-black shadow-xs hover:bg-[#d6ccc2] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 w-full sm:w-auto"
               >
                 <LiaDownloadSolid className="text-base" /> Download CV

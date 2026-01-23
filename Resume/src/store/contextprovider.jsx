@@ -11,11 +11,11 @@ const Navigation = [
 const educationData = [
   {
     id: 1,
-    degree: "Bachelor of Science in Data Science",
-    institution: "Massachusetts Institute of Technology (MIT)",
-    duration: "2017 - 2021",
-    location: "Cambridge, Massachusetts",
-    gpa: "3.92/4.0",
+    degree: "Mutriculation",
+    institution: "Bise Bahawalpur",
+    duration: "2011 - 2021",
+    location: "Bahawalpur, Pakistan ",
+    gpa: "591/1050",
     highlights: [
       "Dean's List - All semesters",
       "Major GPA: 4.0",
@@ -26,11 +26,11 @@ const educationData = [
   },
   {
     id: 2,
-    degree: "Master of Business Administration (MBA)",
-    institution: "Stanford Graduate School of Business",
-    duration: "2021 - 2023",
-    location: "Stanford, California",
-    gpa: "3.88/4.0",
+    degree: "I.com",
+    institution: "Bise Bahawalpur",
+    duration: "2014",
+    location: "Bahawalpur, Pakistan",
+    gpa: "611/1100",
     highlights: [
       "Specialization: Business Analytics",
       "Scholarship Recipient",
@@ -41,11 +41,11 @@ const educationData = [
   },
   {
     id: 3,
-    degree: "Advanced Certifications",
-    institution: "Various Online Platforms",
-    duration: "2023 - Present",
-    location: "Remote",
-    gpa: "Ongoing",
+    degree: "Bachelor's (HONS) statistics", 
+    institution: "the islamia university of bahawalpur",
+    duration: "2019 - Present",
+    location: "bahawalpur, Pakistan",
+    gpa: " 3.13/4.00",
     highlights: [
       "Google Cloud Professional Data Engineer",
       "AWS Certified Solutions Architect",
@@ -67,34 +67,34 @@ const workSvg = [
 const experiences = [
   {
     id: 1,
-    position: "Data Scientist & Business Consultant",
-    company: "TechNova",
-    duration: "Jun 2021 - Present",
+    position: "Data entry operator",
+    company: "Friends institute of Management ",
+    duration: "05-jan-2015 to 30-dec-2017",
     type: "Full-Time",
     location: "Phoenix, Arizona, USA",
     description:
       "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize organizational performance.",
-  },
-  {
-    id: 2,
-    position: "Senior Data Analyst",
-    company: "DataFlow Inc",
-    duration: "Jan 2020 - May 2021",
-    type: "Full-Time",
-    location: "New York, NY, USA",
-    description:
-      "Led cross-functional teams to analyze complex datasets and provide actionable insights for strategic business decisions.",
-  },
-  {
-    id: 3,
-    position: "Junior Data Analyst",
-    company: "Analytics Pro",
-    duration: "Jul 2019 - Dec 2019",
-    type: "Internship",
-    location: "Remote",
-    description:
-      "Assisted in data collection, cleaning, and analysis to support business intelligence initiatives.",
-  },
+   },
+  // {
+  //   id: 2,
+  //   position: "Senior Data Analyst",
+  //   company: "DataFlow Inc",
+  //   duration: "Jan 2020 - May 2021",
+  //   type: "Full-Time",
+  //   location: "New York, NY, USA",
+  //   description:
+  //     "Led cross-functional teams to analyze complex datasets and provide actionable insights for strategic business decisions.",
+  // },
+  // {
+  //   id: 3,
+  //   position: "Junior Data Analyst",
+  //   company: "Analytics Pro",
+  //   duration: "Jul 2019 - Dec 2019",
+  //   type: "Internship",
+  //   location: "Remote",
+  //   description:
+  //     "Assisted in data collection, cleaning, and analysis to support business intelligence initiatives.",
+  // },
 ];
 
 

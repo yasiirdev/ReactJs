@@ -69,7 +69,7 @@ export default function EducationSection() {
                       <div className="flex items-center gap-2">
                         <FaStar className="text-yellow-500 shrink-0" />
                         <span className="inline-block bg-purple-100 text-blue-800 px-3 py-1 rounded-full font-semibold text-xs sm:text-sm">
-                          GPA: {edu.gpa}
+                          gpa : {edu.gpa}
                         </span>
                       </div>
                     </div>
