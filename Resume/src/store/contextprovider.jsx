@@ -13,7 +13,7 @@ const educationData = [
     id: 1,
     degree: "Mutriculation",
     institution: "Bise Bahawalpur",
-    duration: "2011 - 2021",
+    duration: "2011 - 2012",
     location: "Bahawalpur, Pakistan ",
     gpa: "591/1050",
     highlights: [
@@ -73,8 +73,7 @@ const experiences = [
     type: "Full-Time",
     location: "Phoenix, Arizona, USA",
     description:
-      "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize organizational performance.",
-   },
+      "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize org[...]\n   },
   // {
   //   id: 2,
   //   position: "Senior Data Analyst",
@@ -96,7 +95,6 @@ const experiences = [
   //     "Assisted in data collection, cleaning, and analysis to support business intelligence initiatives.",
   // },
 ];
-
 
 function ContextProvider({ children }) {
   return (
