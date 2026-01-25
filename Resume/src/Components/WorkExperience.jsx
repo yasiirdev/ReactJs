@@ -42,10 +42,10 @@ export default function WorkExperience() {
                 <div className="flex-1">
                   {/* Position and Company */}
                   <div className="mb-3 sm:mb-4">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-1 sm:mb-2 group-hover:text-blue-600 transition-colors capitalize">
                       {exp.position}
                     </h3>
-                    <p className="text-sm sm:text-base md:text-lg font-semibold text-blue-600 mb-2">
+                    <p className="text-sm  capitalize sm:text-base md:text-lg font-semibold text-blue-600 mb-2">
                       {exp.company}
                     </p>
 

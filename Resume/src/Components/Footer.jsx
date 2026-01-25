@@ -1,18 +1,19 @@
 import { useContext } from "react";
 import AppContext from "../store/ContextApi";
-
+import bluebackground from "../assets/bluebackground.jpeg";
 export default function Footer() {
   const { Navigation } = useContext(AppContext);  
     return (
-      <footer className="bg-neutral-50 py-16 lg:py-24">
+      <footer className="bg-neutral-50 py-16 lg:py-24" id="footer">
         <div className="max-w-7xl mx-auto px-4 xl:px-0 flex flex-col gap-y-12">
           <div className="grid gap-y-6 sm:grid-cols-2 sm:gap-x-8 md:px-4 lg:grid-cols-4 lg:gap-x-12 lg:gap-y-0 lg:px-8">
-            <figure>
+            <figure className="inline-flex ">
               <img
-                className="h-8"
-                src="https://tailkits.com/ui/iframe/assets/img/logo-big.svg"
-                alt="Logo"
+                className="h-8 rounded-md "
+                src={bluebackground}
+                alt="Muhammad Waqar ul haq"
               />
+              <p className="pl-3 h-30  w-30 leading-4 font-semibold ">Muhammad Waqar</p>
             </figure>
             <div className="flex flex-col items-start gap-y-4">
               <div className="text-sm font-bold text-neutral-700">Sections</div>
@@ -38,24 +39,17 @@ export default function Footer() {
           <div className="flex flex-wrap items-center justify-between gap-4 md:px-4 lg:px-8">
             <div className="flex flex-wrap items-center gap-3 lg:gap-4">
               <div className="text-sm font-medium text-neutral-700">
-                <time>2026</time>- Sir Wakar    . All rights reserved.
+                <time>2026</time>- Muhammad Waqar ul haq    . All rights reserved.
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-x-6">
                 <a
                   className="whitespace-nowrap text-sm font-medium text-neutral-500 transition hover:text-neutral-700"
-                  href="mailto:info@tailkits.com"
+                  href="mailto:waqarulhaq617@gmail.com"
                   title="Contact"
                 >
                   Contact{" "}
-                </a>
-                <a
-                  className="whitespace-nowrap text-sm font-medium text-neutral-500 transition hover:text-neutral-700"
-                  href="/privacy-policy"
-                  title="Privacy Policy"
-                >
-                  Privacy Policy
                 </a>
               </div>
               <div className="flex items-center gap-x-4">

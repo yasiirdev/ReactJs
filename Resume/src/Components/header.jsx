@@ -2,7 +2,7 @@ import { MdOutlineContacts, MdOutlineMail } from "react-icons/md";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { useContext, useState } from "react";
 import AppContext from "../store/ContextApi";
-import Cv from "../assets/Cv.pdf";
+import Cv from "../assets/Cv.jpeg";
 import bluebackground from "../assets/bluebackground.jpeg";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="relative w-full">
+      <div className="relative w-full" id="home">
         <header className="py-2 sm:py-2.5 md:py-3 lg:py-3">
           <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-4 lg:px-0">
             <div className="bg-white flex items-center justify-between gap-2 sm:gap-3 md:gap-x-4 rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-[1.375rem] py-1.5 sm:py-2 md:py-2.5 pl-3 sm:pl-4 md:pl-5 lg:pl-5 pr-2 sm:pr-2.5 shadow-[0_2px_10px_0px_rgba(0,0,0,0.15)] lg:grid lg:grid-cols-[1fr_auto_1fr] lg:justify-stretch lg:gap-x-12">
@@ -41,7 +41,7 @@ export default function Header() {
                         <a
                           href={tab.link}
                           className="px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-neutral-700 transition hover:text-neutral-600"
-                        >
+                            >
                           {tab.name}
                         </a>
                       </li>
@@ -55,6 +55,7 @@ export default function Header() {
                   <button
                     href="#"
                     className="hidden lg:flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 whitespace-nowrap"
+                    onClick={() => window.location = "mailto:waqarulhaq617@gmail.com"}
                   >
                     <MdOutlineContacts className="text-base" />
                     <span>Contact Me</span>
@@ -94,16 +95,16 @@ export default function Header() {
             <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
               {/* Navigation Links */}
               <nav className="space-y-2">
-                {Navigation.map((tab, idx) => (
+                {Navigation.map((tab, idx) => 
                   <a
                     key={idx}
                     href={tab.link}
-                    className="block px-4 py-2.5 text-sm font-medium text-neutral-700 hover:bg-gray-100 rounded-lg transition"
+                    className="block px-4 py-2.5 text-sm font-medium text-neutral-600 hover:bg-gray-100 rounded-lg transition"
                     onClick={() => setMenuOpen(false)}
                   >
                     {tab.name}
                   </a>
-                ))}
+                )}
               </nav>
 
               {/* Divider */}
@@ -111,7 +112,10 @@ export default function Header() {
 
               {/* Contact Button in Mobile Menu */}
               <button
-                onClick={() => setMenuOpen(false)}
+                onClick={() => {
+                  setMenuOpen(false);
+                  return window.location = "mailto:waqarulhaq617@gmail.com";
+                }}
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-slate-700 transition"
               >
                 <MdOutlineContacts className="text-base" />
@@ -137,7 +141,7 @@ export default function Header() {
                 Muhammad Waqar ul haq
               </h1>
               <p className="text-sm sm:text-base md:text-lg  lg:text-3xl capitalize font-medium text-black/80">
-                A data entry operator
+                data entry operator
               </p>
             </div>
 
