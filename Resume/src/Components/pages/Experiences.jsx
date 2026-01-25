@@ -3,7 +3,7 @@ import Worked from "../Worked";
 
 export default function ExperiencePage() {
     return (
-      <div className="w-full">
+      <div className="w-full" id="exp">
         <Worked />
         <WorkExperience />
       </div>
