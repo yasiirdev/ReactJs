@@ -1,11 +1,11 @@
 import AppContext from "./ContextApi";
 
 const Navigation = [
-  { name: "Home", link: "#" },
-  { name: "Profile", link: "#" },
-  { name: "Experience", link: "#" },
-  { name: "Education", link: "#" },
-  { name: "Skills", link: "#" },
+  { name: "Home", link: "#home" },
+  { name: "Profile", link: "#pf" },
+  { name: "Experience", link: "#exp" },
+  { name: "Education", link: "#ed" },
+  { name: "Skills", link: "#sk" },
 ];
 
 const educationData = [
@@ -41,7 +41,7 @@ const educationData = [
   },
   {
     id: 3,
-    degree: "Bachelor's (HONS) statistics", 
+    degree: "Bachelor's (HONS) statistics",
     institution: "the islamia university of bahawalpur",
     duration: "2019 - Present",
     location: "bahawalpur, Pakistan",
@@ -73,27 +73,9 @@ const experiences = [
     type: "Full-Time",
     location: "Phoenix, Arizona, USA",
     description:
-      "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize org[...]\n   },
-  // {
-  //   id: 2,
-  //   position: "Senior Data Analyst",
-  //   company: "DataFlow Inc",
-  //   duration: "Jan 2020 - May 2021",
-  //   type: "Full-Time",
-  //   location: "New York, NY, USA",
-  //   description:
-  //     "Led cross-functional teams to analyze complex datasets and provide actionable insights for strategic business decisions.",
-  // },
-  // {
-  //   id: 3,
-  //   position: "Junior Data Analyst",
-  //   company: "Analytics Pro",
-  //   duration: "Jul 2019 - Dec 2019",
-  //   type: "Internship",
-  //   location: "Remote",
-  //   description:
-  //     "Assisted in data collection, cleaning, and analysis to support business intelligence initiatives.",
-  // },
+      "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize "
+  }
+
 ];
 
 function ContextProvider({ children }) {
