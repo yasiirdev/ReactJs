@@ -68,7 +68,7 @@ export default function Header() {
                     className="lg:hidden p-1 sm:p-1.5 md:p-2"
                     title="Open menu"
                   >
-                    <svg
+                     <svg
                       className="h-4 sm:h-5 md:h-6 text-slate-500"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
