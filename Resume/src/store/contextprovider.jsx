@@ -11,7 +11,7 @@ const Navigation = [
 const educationData = [
   {
     id: 1,
-    degree: "Mutriculation",
+    degree: "Matriculation",
     institution: "Bise Bahawalpur",
     duration: "2011 - 2012",
     location: "Bahawalpur, Pakistan ",
@@ -57,11 +57,11 @@ const educationData = [
 ];
 
 const workSvg = [
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-2.svg", alt: "logo" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-3.svg", alt: "logo" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-4.svg", alt: "logo" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-5.svg", alt: "logo" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-6.svg", alt: "logo" },
+  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-2.svg", alt: "facebook", link: "" },
+  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-3.svg", alt: "x", link: "" },
+  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-4.svg", alt: "instagram", link: "" },
+  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-5.svg", alt: "tiktok", link: "" },
+  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-6.svg", alt: "linkedin", link: "" },
 ];
 
 const experiences = [
@@ -71,9 +71,9 @@ const experiences = [
     company: "Friends institute of Management ",
     duration: "05-jan-2015 to 30-dec-2017",
     type: "Full-Time",
-    location: "Phoenix, Arizona, USA",
-    description:
-      "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize "
+     location: "Phoenix, Arizona, USA",
+    // description:
+    //   "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize "
   }
 
 ];
