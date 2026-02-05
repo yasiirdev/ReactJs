@@ -57,11 +57,26 @@ const educationData = [
 ];
 
 const workSvg = [
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-2.svg", alt: "facebook", link: "" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-3.svg", alt: "x", link: "" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-4.svg", alt: "instagram", link: "" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-5.svg", alt: "tiktok", link: "" },
-  { svg: "https://tailkits.com/ui/iframe/assets/img/logo-6.svg", alt: "linkedin", link: "" },
+  {
+    svg: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1280px-2023_Facebook_icon.svg.png",
+    alt: "facebook",
+    link: "https://www.facebook.com/share/17xnRsgfNx/",
+  },
+  {
+    svg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKQ9DF_RPM7IIoXw0GtCI6RnFQV_WBwecCsQ&s",
+    alt: "x",
+    link: "https://x.com/ul_mastoi",
+  },
+  {
+    svg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8qOK7A5IKaNOw-ZPeg_2OOD5ZIW3JOha8FA&s",
+    alt: "instagram",
+    link: "https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=22psmhu",
+  },
+  // {
+  //   svg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzgXYEXEgOmxvZJoK8rAZtk0v2LipcuKRQHA&s",
+  //   alt: "linkedin",
+  //   link: "https://www.linkedin.com/in/muhammad-ali-mustafa-721543245/",
+  // },
 ];
 
 const experiences = [

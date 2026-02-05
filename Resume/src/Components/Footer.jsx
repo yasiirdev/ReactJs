@@ -13,7 +13,9 @@ export default function Footer() {
                 src={bluebackground}
                 alt="Muhammad Waqar ul haq"
               />
-              <p className="pl-3 h-30  w-30 leading-4 font-semibold ">Muhammad Waqar</p>
+              <p className="pl-3 h-30  w-30 leading-4 font-semibold ">
+                Muhammad Waqar
+              </p>
             </figure>
             <div className="flex flex-col items-start gap-y-4">
               <div className="text-sm font-bold text-neutral-700">Sections</div>
@@ -32,14 +34,12 @@ export default function Footer() {
                 })}
               </div>
             </div>
-
-         
           </div>
           <div className="border-b border-b-neutral-200"></div>
           <div className="flex flex-wrap items-center justify-between gap-4 md:px-4 lg:px-8">
             <div className="flex flex-wrap items-center gap-3 lg:gap-4">
               <div className="text-sm font-medium text-neutral-700">
-                <time>2026</time>- Muhammad Waqar ul haq    . All rights reserved.
+                <time>2026</time>- Muhammad Waqar ul haq . All rights reserved.
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-6">
@@ -55,7 +55,11 @@ export default function Footer() {
               <div className="flex items-center gap-x-4">
                 <div className="mr-2 h-4 w-px4 bg-neutral-200"></div>
                 <div className="flex flex-wrap items-center gap-4">
-                  <a href="#" title="Instagram" target="_blank">
+                  <a
+                    href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=22psmhu"
+                    title="Instagram"
+                    target="_blank"
+                  >
                     <svg
                       className="h-5 text-slate-700"
                       viewBox="0 0 16 16"
@@ -70,7 +74,7 @@ export default function Footer() {
                       />
                     </svg>
                   </a>
-                  <a href="#" title="Linkedin" target="_blank">
+                  {/* <a href="#" title="Linkedin" target="_blank">
                     <svg
                       className="h-5 text-slate-700"
                       viewBox="0 0 16 16"
@@ -84,8 +88,8 @@ export default function Footer() {
                         fill="currentColor"
                       />
                     </svg>
-                  </a>
-                  <a href="#" title="X" target="_blank">
+                  </a> */}
+                  <a href="https://x.com/ul_mastoi" title="X" target="_blank">
                     <svg
                       className="h-5 text-slate-700"
                       viewBox="0 0 16 16"
@@ -100,26 +104,24 @@ export default function Footer() {
                       />
                     </svg>
                   </a>
-                  <a href="#" title="Smiling Face" target="_blank">
+                  <a
+                    href="https://www.facebook.com/share/17xnRsgfNx/"
+                    title="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <svg
                       className="h-5 text-slate-700"
                       viewBox="0 0 16 16"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <g clipPath="url(#clip0_1502_25447)">
-                        <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M7.99991 0.935547C4.09837 0.935547 0.935547 4.09837 0.935547 7.9999C0.935547 11.9014 4.09837 15.0643 7.99991 15.0643C11.9014 15.0643 15.0642 11.9014 15.0642 7.9999C15.0642 4.09837 11.9014 0.935547 7.99991 0.935547ZM1.94889 7.9999C1.94889 4.65802 4.65802 1.94888 7.99991 1.94888C11.3418 1.94888 14.0509 4.65802 14.0509 7.9999C14.0509 11.3417 11.3418 14.051 7.99991 14.051C4.65802 14.051 1.94889 11.3417 1.94889 7.9999ZM5.3733 9.82841C5.20479 9.58682 4.87234 9.52759 4.63075 9.6961C4.38916 9.86461 4.32993 10.1971 4.49844 10.4386C5.26854 11.5427 6.54969 12.2669 8.00004 12.2669C9.45039 12.2669 10.7315 11.5427 11.5017 10.4386C11.6702 10.1971 11.6109 9.86461 11.3693 9.6961C11.1278 9.52759 10.7953 9.58682 10.6268 9.82841C10.0476 10.6587 9.08701 11.2002 8.00004 11.2002C6.91307 11.2002 5.95247 10.6587 5.3733 9.82841ZM5.73337 7.30684C6.24883 7.30684 6.6667 6.88889 6.6667 6.37351C6.6667 5.85812 6.24883 5.44017 5.73337 5.44017C5.21791 5.44017 4.80003 5.85812 4.80003 6.37351C4.80003 6.88889 5.21791 7.30684 5.73337 7.30684ZM11.2 6.37351C11.2 6.88889 10.7822 7.30684 10.2667 7.30684C9.75124 7.30684 9.33337 6.88889 9.33337 6.37351C9.33337 5.85812 9.75124 5.44017 10.2667 5.44017C10.7822 5.44017 11.2 5.85812 11.2 6.37351Z"
-                          fill="currentColor"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_1502_25447">
-                          <rect width="16" height="16" fill="white" />
-                        </clipPath>
-                      </defs>
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M7.99991 0.935547C4.09837 0.935547 0.935547 4.09837 0.935547 7.9999C0.935547 11.9014 4.09837 15.0643 7.99991 15.0643C11.9014 15.0643 15.0642 11.9014 15.0642 7.9999C15.0642 4.09837 11.9014 0.935547 7.99991 0.935547ZM8.65636 7.22H10.0449V5.94778C9.98996 5.84156 9.75961 5.50778 9.24099 5.50778C8.38406 5.50778 7.75405 6.06055 7.75405 7.16389V8.08122H6.4499V9.53667H7.75405V14.0509H9.30968V9.53667H10.6021L10.8095 8.08122H9.30968V7.35911C9.30968 6.94589 9.42312 6.63867 9.98 6.63867C10.4096 6.63867 10.6021 6.94589 10.6021 7.35911V7.22H8.65636Z"
+                        fill="currentColor"
+                      />
                     </svg>
                   </a>
                 </div>
