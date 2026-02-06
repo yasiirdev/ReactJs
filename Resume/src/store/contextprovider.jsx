@@ -1,5 +1,5 @@
 import AppContext from "./ContextApi";
-
+import certification from "../assets/certification.png";
 const Navigation = [
   { name: "Home", link: "#home" },
   { name: "Profile", link: "#pf" },
@@ -7,6 +7,28 @@ const Navigation = [
   { name: "Education", link: "#ed" },
   { name: "Skills", link: "#sk" },
 ];
+
+  const skillCategories = [
+    {
+      category: "Technical Skills",
+      skills: [
+        { name: "Ms Window", level: 90 },
+        { name: "Ms Office", level: 92 },
+        { name: "Internet email", level: 90 },
+        { name: "composing (english + urdu)", level: 88 },
+        { name: "typing speed (W.P.M)", level: 40 },
+      ],
+    },
+  ];
+
+  const certifications = [
+    {
+      id: 1,
+      title: "Marketing & Advertising",
+      issuer: "e-Rozgaar",
+      image: certification,
+    },
+  ];
 
 const educationData = [
   {
@@ -16,13 +38,6 @@ const educationData = [
     duration: "2011 - 2012",
     location: "Bahawalpur, Pakistan ",
     gpa: "591/1050",
-    highlights: [
-      "Dean's List - All semesters",
-      "Major GPA: 4.0",
-      "Relevant Coursework: Machine Learning, Statistics, Big Data Analytics",
-    ],
-    description:
-      "Comprehensive program focused on data science, statistical analysis, and machine learning with hands-on project experience.",
   },
   {
     id: 2,
@@ -31,28 +46,14 @@ const educationData = [
     duration: "2014",
     location: "Bahawalpur, Pakistan",
     gpa: "611/1100",
-    highlights: [
-      "Specialization: Business Analytics",
-      "Scholarship Recipient",
-      "Thesis: Advanced Data-Driven Decision Making",
-    ],
-    description:
-      "Advanced business education combining technical expertise with strategic management and leadership principles.",
   },
   {
     id: 3,
     degree: "Bachelor's (HONS) statistics",
     institution: "the islamia university of bahawalpur",
     duration: "2019 - Present",
-    location: "bahawalpur, Pakistan",
+    location: "Bahawalpur, Pakistan",
     gpa: " 3.13/4.00",
-    highlights: [
-      "Google Cloud Professional Data Engineer",
-      "AWS Certified Solutions Architect",
-      "Data Science Professional Certificate",
-    ],
-    description:
-      "Continuous professional development through industry-recognized certifications and specialized courses.",
   },
 ];
 
@@ -86,16 +87,16 @@ const experiences = [
     company: "Friends institute of Management ",
     duration: "05-jan-2015 to 30-dec-2017",
     type: "Full-Time",
-     location: "Phoenix, Arizona, USA",
-    // description:
-    //   "Demonstrating a seamless integration of data science acumen and business consulting proficiency, effectively driving transformative initiatives and delivering strategic insights to optimize "
+     location: "Punjab, bahawalpur, Pakistan",
+    description:
+      "- Managed and organized data entry tasks, ensuring accuracy and efficiency in processing large volumes of information.\n- Utilized various software tools to input, update, and maintain data records, contributing to streamlined operations and improved data integrity.\n- Collaborated with team members to meet deadlines and achieve departmental goals, demonstrating strong communication and teamwork skills.",
   }
 
 ];
 
 function ContextProvider({ children }) {
   return (
-    <AppContext value={{ Navigation, educationData, workSvg, experiences }}>
+    <AppContext value={{ Navigation, educationData, workSvg, experiences, skillCategories , certifications }}>
       {children}
     </AppContext>
   );

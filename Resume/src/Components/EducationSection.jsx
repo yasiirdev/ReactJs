@@ -77,30 +77,6 @@ export default function EducationSection() {
 
                   {/* Divider */}
                   <div className="border-b-2 border-gray-100 my-4 sm:my-5 md:my-6"></div>
-
-                  {/* Description */}
-                  <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed md:leading-8 mb-4 sm:mb-5 md:mb-6">
-                    {edu.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <div className="bg-linear-to-br from-purple-50 to-blue-50 rounded-lg p-4 sm:p-5 md:p-6 border border-purple-100">
-                    <h4 className="flex items-center gap-2 text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-3">
-                      <FaAward className="text-blue-600" />
-                      Highlights & Achievements
-                    </h4>
-                    <ul className="space-y-2">
-                      {edu.highlights.map((highlight, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-xs sm:text-sm md:text-base text-gray-700"
-                        >
-                          <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 shrink-0"></span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>

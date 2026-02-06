@@ -3,6 +3,7 @@ import Header from "./Components/header";
 import Hero from "./Components/Hero";
 import EducationPage from "./Components/pages/Education";
 import ExperiencePage from "./Components/pages/Experiences";
+import Skills from "./Components/skills";
 import ContextProvider from "./store/contextprovider";
 
 
@@ -15,6 +16,7 @@ function Resume() {
         <Hero />
         <ExperiencePage />
         <EducationPage />
+        <Skills />
         <Footer />
       </ContextProvider>
     </>
