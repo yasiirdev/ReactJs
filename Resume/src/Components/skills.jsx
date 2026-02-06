@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import AppContext from "../store/ContextApi";
 
-
 export default function Skills() {
-    const {certifications , skillCategories } = useContext(AppContext);
+  const { certifications, skillCategories } = useContext(AppContext);
 
   return (
     <section className="py-20 bg-linear-to-b bg-neutral-50  text-black" id="sk">
@@ -30,10 +29,10 @@ export default function Skills() {
                 {category.category}
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-5" key={index}>
                 {category.skills.map((skill, idx) => (
                   <div key={idx} className="group/skill">
-                    <div className="flex justify-between items-center mb-2">
+                    <div className="flex justify-between items-center mb-2" key={index}>
                       <span className="text-slate-200 font-medium text-sm">
                         {skill.name}
                       </span>
@@ -63,7 +62,7 @@ export default function Skills() {
           </h3>
           <div className="w-20 h-1 bg-linear-to-r from-blue-400 to-purple-400 mx-auto rounded-full mb-12"></div>
           <div className="justify-items-center align-items-center">
-            {certifications.map((cert) => (
+            {certifications.map((cert ) => (
               <div
                 key={cert.id}
                 className="group relative bg-linear-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2"

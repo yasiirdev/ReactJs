@@ -15,9 +15,8 @@ export default function Worked() {
           <div className="mt-9 flex flex-wrap items-center justify-center gap-8 sm:gap-x-12 lg:mt-12 lg:gap-x-24">
             {workSvg.map((obj , idx) => {
               return (
-               <a href={obj.link}>
+               <a href={obj.link} key={idx}>
                 <img
-                  key={idx}
                   className="h-8 sm:h-12 lg:h-16"
                   src={obj.svg}
                   alt={obj.alt}

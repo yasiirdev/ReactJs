@@ -41,7 +41,7 @@ export default function Header() {
                         <a
                           href={tab.link}
                           className="px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-neutral-700 transition hover:text-neutral-600"
-                            >
+                        >
                           {tab.name}
                         </a>
                       </li>
@@ -55,7 +55,9 @@ export default function Header() {
                   <button
                     href="#"
                     className="hidden lg:flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 whitespace-nowrap"
-                    onClick={() => window.location = "mailto:waqarulhaq617@gmail.com"}
+                    onClick={() =>
+                      (window.location = "mailto:waqarulhaq617@gmail.com")
+                    }
                   >
                     <MdOutlineContacts className="text-base" />
                     <span>Contact Me</span>
@@ -68,7 +70,7 @@ export default function Header() {
                     className="lg:hidden p-1 sm:p-1.5 md:p-2"
                     title="Open menu"
                   >
-                     <svg
+                    <svg
                       className="h-4 sm:h-5 md:h-6 text-slate-500"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -95,16 +97,20 @@ export default function Header() {
             <div className="max-w-4xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
               {/* Navigation Links */}
               <nav className="space-y-2">
-                {Navigation.map((tab, idx) => 
-                  <a
-                    key={idx}
-                    href={tab.link}
-                    className="block px-4 py-2.5 text-sm font-medium text-neutral-600 hover:bg-gray-100 rounded-lg transition"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {tab.name}
-                  </a>
-                )}
+                <ul>
+                  {Navigation.map((tab , idx) => (
+                    <li key={idx}> 
+                    <a
+                      key={tab}
+                      href={tab.link}
+                      className="block px-4 py-2.5 text-sm font-medium text-neutral-600 hover:bg-gray-100 rounded-lg transition"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {tab.name}
+                      </a>
+                      </li>
+                  ))}
+                </ul>
               </nav>
 
               {/* Divider */}
@@ -114,7 +120,7 @@ export default function Header() {
               <button
                 onClick={() => {
                   setMenuOpen(false);
-                  return window.location = "mailto:waqarulhaq617@gmail.com";
+                  return (window.location = "mailto:waqarulhaq617@gmail.com");
                 }}
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-slate-700 transition"
               >
@@ -148,7 +154,9 @@ export default function Header() {
             {/* Hero CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-x-6 w-full sm:w-auto ">
               <button
-                onClick={() => (window.location = "mailto:waqarulhaq617@gmail.com")}
+                onClick={() =>
+                  (window.location = "mailto:waqarulhaq617@gmail.com")
+                }
                 className="flex items-center justify-center gap-2 rounded-xl bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 w-full sm:w-auto"
               >
                 <MdOutlineMail className="text-base" /> Send Email

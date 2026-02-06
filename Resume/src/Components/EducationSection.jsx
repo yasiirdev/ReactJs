@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FaCalendar, FaMapMarkerAlt, FaAward, FaStar } from "react-icons/fa";
+import { FaCalendar, FaMapMarkerAlt,  FaStar } from "react-icons/fa";
 import AppContext from "../store/ContextApi";
 
 export default function EducationSection() {
@@ -28,7 +28,7 @@ export default function EducationSection() {
               key={edu.id}
               className="group bg-white border-2 border-gray-200 rounded-xl p-5 sm:p-6 md:p-8 lg:p-10 hover:border-blue-400 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8" key={index}>
                 {/* Timeline indicator */}
                 <div className="hidden sm:flex flex-col items-center">
                   <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-blue-100 mt-2"></div>
