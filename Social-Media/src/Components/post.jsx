@@ -8,7 +8,7 @@ const Post = ({ postlist }) => {
   const [liked, setLiked] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
-  const deletefun = () => {
+  const deleteHandle = () => {
     deletepost(postlist.id);
     setShowDeleteConfirm(false);
   };
@@ -29,7 +29,7 @@ const Post = ({ postlist }) => {
             <div className="d-flex gap-2">
               <button
                 className="btn btn-sm btn-danger"
-                onClick={deletefun}
+                onClick={deleteHandle}
                 title="Confirm delete"
               >
                 Yes
@@ -90,7 +90,7 @@ const Post = ({ postlist }) => {
       {/* Post Footer - Action Buttons */}
       <div className="card-footer bg-light border-top d-flex gap-2 justify-content-around py-3">
         <button
-          className={`btn btn-sm flex-grow-1 ${
+          className={`btn btn-sm grow ${
             liked ? "btn-danger" : "btn-outline-danger"
           }`}
           onClick={() => setLiked(!liked)}
@@ -100,14 +100,14 @@ const Post = ({ postlist }) => {
           {liked ? "Liked" : "Like"}
         </button>
         <button
-          className="btn btn-sm btn-outline-info flex-grow-1"
+          className="btn btn-sm btn-outline-info grow"
           title="Comment on post"
         >
           <FaComment className="me-2" />
           Comment
         </button>
         <button
-          className="btn btn-sm btn-outline-success flex-grow-1"
+          className="btn btn-sm btn-outline-success grow"
           title="Share post"
         >
           <FaShare className="me-2" />
