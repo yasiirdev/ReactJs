@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Assistant", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .search-container {
+    @apply hidden w-xs  max-w-xl items-center gap-2 rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-700 ring-pink-100 transition md:flex;
+  }
+}
+
+@theme {
+  --assistant-font: "Assistant", ui-sans-serif, system-ui, sans-serif;
+}
