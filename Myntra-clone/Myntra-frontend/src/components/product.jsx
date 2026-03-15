@@ -1,14 +1,26 @@
-export default function Product({product}) {
-  
+import { useDispatch, useSelector } from "react-redux";
+import { removeSetBagItems, setBagItems } from "../store/bagSlice";
+
+export default function Product({ product }) {
   const discount = product.discount_percentage || 20;
   const rating = product.rating.stars || 4.5;
-  const originalPrice = product.original_price || Math.round(product.current_price / (1 - discount / 100));
+  const originalPrice =
+    product.original_price ||
+    Math.round(product.current_price / (1 - discount / 100));
 
-  const Handlerbag = () => {
-    console.log("send to bag");
-  }
-  
-  
+  const dispatch = useDispatch();
+  const bagItems = useSelector((state) => state.bagSlice);
+  const foundIdx = bagItems.indexOf(product.id) >= 0;
+
+  const HandleAddBagItems = () => {
+    dispatch(setBagItems(product.id));
+  };
+
+  const HandleRemoveBagItems = () => {
+    dispatch(removeSetBagItems(product.id));
+  };
+
+    
   return (
     <div className="group relative overflow-hidden  bg-white  hover:shadow-xl transition-all duration-300 ease-in-out">
       {/* Image Container */}
@@ -31,11 +43,23 @@ export default function Product({product}) {
           </svg>
           <span className="pr-1 pl-1">|</span> {product.rating.count || 0}
         </div>
-        {/* Wishlist Button */}
+        {/* Bag Button */}
         <center className="absolute bottom-0 w-full h-10 bg-white p-2  shadow-md hover:bg-white transition-colors opacity-0 group-hover:opacity-100 duration-300  ">
-          <button className="w-43 h-8  hover:border   outline-none flex justify-center items-center" onClick={Handlerbag}>
-            Add to bag
-          </button>
+          {foundIdx ? (
+            <button
+              className="w-43 h-8  hover:border   outline-none flex justify-center items-center"
+              onClick={HandleRemoveBagItems}
+            >
+              Remove for bag
+            </button>
+          ) : (
+            <button
+              className="w-43 h-8  hover:border   outline-none flex justify-center items-center"
+              onClick={HandleAddBagItems}
+            >
+              Add to bag
+            </button>
+          )}
         </center>
       </div>
 
