@@ -2,6 +2,7 @@ import { CgProfile } from "react-icons/cg";
 import { IoIosHeartEmpty, IoIosSearch } from "react-icons/io";
 import { BsHandbag } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const navLinks = [
   { nav: "Men", path: "men" },
@@ -19,6 +20,9 @@ const iconItems = [
 ];
 
 export default function Header() {
+  const bagItems  = useSelector((state) => state.bagSlice);  
+
+
   return (
     <header className="sticky top-0 z-40 border-b shadow-2xs border-white bg-white/80 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3  h-20.5 bg-white">
@@ -35,20 +39,22 @@ export default function Header() {
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm font-semibold uppercase text-gray-800 md:flex">
-            {navLinks.map((item) => (
-              <Link
-                key={item.nav}
-                to={item.path}
-                className="relative pb-2 transition hover:text-pink-600 font-bold"
-              >
-                {item.nav}
-                {item.nav === "Studio" && (
-                  <span className="absolute -right-8 -top-2 rounded-sm text-red-500 px-1 text-[10px] font-bold ">
-                    New
-                  </span>
-                )}
-              </Link>
-            ))}
+            {navLinks.map((item) => {
+              return (
+                <Link
+                  key={item.nav}
+                  to={item.path}
+                  className="relative pb-2 transition hover:text-pink-600 font-bold"
+                >
+                  {item.nav}
+                  {item.nav === "Studio" && (
+                    <span className="absolute -right-8 -top-2 rounded-sm text-red-500 px-1 text-[10px] font-bold ">
+                      New
+                    </span>
+                  )}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 
@@ -64,16 +70,25 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-6 text-xs font-semibold uppercase text-gray-800">
-            {iconItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.path}
-                className="flex flex-col items-center gap-1 transition hover:text-pink-600 font-bold"
-              >
-                <span className="text-lg">{item.icon}</span>
-                <span className="capitalize">{item.label}</span>
-              </Link>
-            ))}
+            {iconItems.map((item) => {
+              return (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className="flex flex-col items-center gap-1 transition hover:text-pink-600 font-bold"
+                >
+                  <div className="text-lg">
+                    {item.icon}
+                    {item.label === "Bag" && (
+                      <span className="absolute  right-3 top-4 rounded-sm text-red-500  text-[10px] font-extrabold ">
+                        {bagItems.length}
+                      </span>
+                    )}
+                  </div>
+                  <span className="capitalize">{item.label}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
