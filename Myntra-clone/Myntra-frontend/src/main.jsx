@@ -1,23 +1,26 @@
-import { StrictMode, Suspense } from "react";
-import { createRoot } from "react-dom/client";
-
-import "./index.css";
-import App from "./App.jsx";
+import { StrictMode, Suspense , lazy} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/home.jsx";
-import Bag_page from "./components/pages/Bagpage.jsx";
-import Profile_page from "./components/pages/profilepage.jsx";
-import Wishlist_page from "./components/pages/wishlistpage.jsx";
-import Men_page from "./components/pages/MenPage.jsx";
-import Loader from "./components/loader.jsx";
 import { Provider } from "react-redux";
 import Store from "./store/index.js";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+
+const App = lazy(() => import("./App.jsx"));
+const Home = lazy(() => import("./components/home.jsx"));
+const Bag_page = lazy(() => import("./components/pages/Bagpage.jsx"));
+const Profile_page = lazy(() => import("./components/pages/profilepage.jsx"));
+const Wishlist_page = lazy(() => import("./components/pages/wishlistpage.jsx"));
+const Men_page = lazy(() => import("./components/pages/MenPage.jsx"));
+const Loader = lazy(() => import("./components/loader.jsx"));
+
+
+
 
 const root = window.document.getElementById("root");
 createRoot(root).render(
   <Provider store={Store}>
     <Suspense fallback={<Loader />}>
-    <StrictMode>
+    {/* <StrictMode> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
@@ -29,7 +32,7 @@ createRoot(root).render(
           </Route>
         </Routes>
       </BrowserRouter>
-      </StrictMode>
+      {/* </StrictMode> */}
       </Suspense>
   </Provider>,
 );
