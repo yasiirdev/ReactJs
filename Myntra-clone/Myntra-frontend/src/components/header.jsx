@@ -6,12 +6,12 @@ import { useSelector } from "react-redux";
 
 const navLinks = [
   { nav: "Men", path: "men" },
-  { nav: "Women", path: "women" },
-  { nav: "Kids", path: "kids" },
-  { nav: "Home", path: "home" },
-  { nav: "Beauty", path: "beauty" },
-  { nav: "Genz", path: "genz" },
-  { nav: "Studio", path: "studio" },
+  { nav: "Women", path: "men" },
+  { nav: "Kids", path: "men" },
+  { nav: "Home", path: "men" },
+  { nav: "Beauty", path: "men" },
+  { nav: "Genz", path: "men" },
+  { nav: "Studio", path: "men" },
 ];
 const iconItems = [
   { label: "Profile", icon: <CgProfile />, path: "profile" },
