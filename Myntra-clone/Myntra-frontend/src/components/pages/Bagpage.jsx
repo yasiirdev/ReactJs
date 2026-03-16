@@ -10,6 +10,16 @@ export default function Bag_page() {
       return bagItems.indexOf(item.id) >= 0;
     });
 
+    const HandleOrder = () => {
+      window.alert("Your order is place successfuly");
+    };
+
+    let items_sum = 0;
+      finalItems.forEach(items => {
+        items_sum += items.current_price;
+    });
+
+
     return (
       <>
         {bagItems.length > 0 ? (
@@ -19,8 +29,20 @@ export default function Bag_page() {
                 <Product key={idx} product={items} />
               ))}
             </div>
-            <div className="w-[20%] bg-blue-400 h-screen">
-              <div></div>
+            <div className="w-[20%] bg-blue-400 h-auto p-2 ">
+              <div className="w-full bg-black h-50 rounded-xl border-3 border-solid border-gray-200 text-white p-3">
+                <b className="capitalize m-4">
+                  number of items : {bagItems.length}{" "}
+                </b>
+                <b className="capitalize m-4">discount rate : ?</b>
+                <b className="capitalize m-4">total price : ₹{items_sum}</b>
+              </div>
+              <button
+                className="w-43 h-8 border outline-none m-auto mt-4 flex justify-center items-center"
+                onClick={HandleOrder}
+              >
+                ORDER
+              </button>
             </div>
           </div>
         ) : (
